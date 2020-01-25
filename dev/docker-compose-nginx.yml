@@ -15,7 +15,7 @@ services:
 
   statping:
     container_name: statping
-    image: hunterlong/statping:latest
+    image: stevenliuyi/statping:latest
     restart: always
     expose:
       - 8080
