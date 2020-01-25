@@ -98,7 +98,7 @@ let options = {
 		show: false
 	},
 	fill: {
-		colors: ["#48d338"],
+		colors: ["#13b2ef"],
 		opacity: 1,
 		type: 'solid'
 	},
@@ -106,7 +106,7 @@ let options = {
 		show: true,
 		curve: 'smooth',
 		lineCap: 'butt',
-		colors: ["#3aa82d"],
+		colors: ["#0d8aba"],
 	},
 	series: [
 		{
@@ -127,8 +127,8 @@ const startOn = UTCTime() - (86400 * 14);
 
 async function RenderCharts() {
 {{ range .Services }}
-	options.fill.colors = {{if .Online}}["#48d338"]{{else}}["#dd3545"]{{end}};
-	options.stroke.colors = {{if .Online}}["#3aa82d"]{{else}}["#c23342"]{{end}};
+	options.fill.colors = {{if .Online}}["#13b2ef"]{{else}}["#aaa"]{{end}};
+	options.stroke.colors = {{if .Online}}["#0d8aba"]{{else}}["#888"]{{end}};
 
 	let chart{{.Id}} = new ApexCharts(document.querySelector("#service_{{js .Id}}"), options);
 
